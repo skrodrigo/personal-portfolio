@@ -58,32 +58,27 @@ function ShinyCard({
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.01 }}
-      transition={{ type: 'spring', stiffness: 100 }}
-    >
-      <ShinyCard className="group h-full w-96">
-        <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 overflow-hidden h-full flex flex-col w-96">
-          <div className="relative w-full h-48 overflow-hidden">
-            <Image
-              src={project.image}
-              alt={project.title}
-              quality={100}
-              priority
-              layout="fill"
-              objectFit="cover"
-              className="rounded-t-xl"
-            />
-          </div>
-          <CardContent className="p-4 flex-grow flex flex-col justify-between">
-            <h3 className="font-medium text-lg text-zinc-100 mb-2">
-              {project.title}
-            </h3>
-            <p className="text-sm text-zinc-400">{project.description}</p>
-          </CardContent>
-        </Card>
-      </ShinyCard>
-    </motion.div>
+    <ShinyCard className="group h-full max-w-96">
+      <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 overflow-hidden h-full flex flex-col max-w-96">
+        <div className="relative w-full h-48 overflow-hidden">
+          <Image
+            src={project.image}
+            alt={project.title}
+            quality={100}
+            priority
+            layout="fill"
+            objectFit="cover"
+            className="rounded-t-xl"
+          />
+        </div>
+        <CardContent className="p-4 flex-grow flex flex-col justify-between">
+          <h3 className="font-medium text-lg text-zinc-100 mb-2">
+            {project.title}
+          </h3>
+          <p className="text-sm text-zinc-400">{project.description}</p>
+        </CardContent>
+      </Card>
+    </ShinyCard>
   )
 }
 
@@ -179,7 +174,7 @@ export default function Component() {
             transition={{ delay: 0.4 }}
           >
             <h2 className="text-xl font-semibold mb-4">Projetos</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {projects.map((project, index) => (
                 <motion.div
                   key={project.title}
