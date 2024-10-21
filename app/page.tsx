@@ -54,7 +54,7 @@ function ShinyCard({
 
   return (
     <div
-      className={`relative overflow-hidden ${className}`}
+      className={`relative overflow-hidden rounded-xl ${className}`}
       onMouseMove={handleMouseMove}
     >
       {children}
@@ -169,6 +169,14 @@ export default function Component() {
                 </h3>
                 <p className="text-sm text-zinc-400">
                   Uninassau Juazeiro do Norte (2023 - 2026)
+                </p>
+              </div>
+              <div className="border-b border-zinc-900 pb-4 space-y-1">
+                <h3 className="font-medium text-zinc-100">
+                  Técnico em Informática
+                </h3>
+                <p className="text-sm text-zinc-400">
+                  EEEP Antonia Nedina Onofre de Paiva (2023 - 2026)
                 </p>
               </div>
             </div>
