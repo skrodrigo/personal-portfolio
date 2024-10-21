@@ -14,26 +14,14 @@ interface Project {
   image: string
 }
 
-// const projects: Project[] = [
-//   {
-//     title: 'nextjs starter kit',
-//     description:
-//       'construa seu saas com as melhores tecnologias para velocidade e escalabilidade.',
-//     image: '/cariri.png',
-//   },
-//   {
-//     title: 'tsafi.xyz',
-//     description:
-//       'um construtor de sites de blog de IA de código aberto e CMS construído com Nextjs, Supabase e TipTap. lance um blog em minutos',
-//     image: '/cariri.png',
-//   },
-//   {
-//     title: 'renderização de blog em html',
-//     description:
-//       'criei meu próprio padrão que me permite renderizar artigos de blog usando html (não gosto de markdown!).',
-//     image: '/cariri.png',
-//   },
-// ]
+const projects: Project[] = [
+  {
+    title: 'Cariri Tips',
+    description:
+      'A Cariri Tips é uma iniciativa grátis que ajuda você a maximizar seus lucros com apostas em futebol. ',
+    image: '/cariri.png',
+  },
+]
 
 function ShinyCard({
   children,
@@ -57,13 +45,13 @@ function ShinyCard({
       className={`relative overflow-hidden rounded-xl ${className}`}
       onMouseMove={handleMouseMove}
     >
-      {children}
       <div
-        className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
           background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.1), transparent 40%)`,
         }}
       />
+      {children}
     </div>
   )
 }
@@ -74,15 +62,19 @@ function ProjectCard({ project }: { project: Project }) {
       whileHover={{ scale: 1.01 }}
       transition={{ type: 'spring', stiffness: 100 }}
     >
-      <ShinyCard className="group h-80">
-        <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 overflow-hidden h-full flex flex-col">
-          <Image
-            src={project.image}
-            alt={project.title}
-            width={600}
-            height={400}
-            className="w-full h-48 object-cover"
-          />
+      <ShinyCard className="group h-full w-96">
+        <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 overflow-hidden h-full flex flex-col w-96">
+          <div className="relative w-full h-48 overflow-hidden">
+            <Image
+              src={project.image}
+              alt={project.title}
+              quality={100}
+              priority
+              layout="fill"
+              objectFit="cover"
+              className="rounded-t-xl"
+            />
+          </div>
           <CardContent className="p-4 flex-grow flex flex-col justify-between">
             <h3 className="font-medium text-lg text-zinc-100 mb-2">
               {project.title}
@@ -181,7 +173,7 @@ export default function Component() {
               </div>
             </div>
           </motion.section>
-          {/* <motion.section
+          <motion.section
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -199,7 +191,7 @@ export default function Component() {
                 </motion.div>
               ))}
             </div>
-          </motion.section> */}
+          </motion.section>
           <motion.section
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
