@@ -163,7 +163,7 @@ export default function Component() {
                   Técnico em Informática
                 </h3>
                 <p className="text-sm text-zinc-400">
-                  EEEP Antonia Nedina Onofre de Paiva (2023 - 2026)
+                  EEEP Antonia Nedina Onofre de Paiva (2020 - 2022)
                 </p>
               </div>
             </div>
