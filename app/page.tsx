@@ -12,6 +12,7 @@ interface Project {
   title: string
   description: string
   image: string
+  link: string
 }
 
 const projects: Project[] = [
@@ -20,6 +21,7 @@ const projects: Project[] = [
     description:
       'A Cariri Tips é uma iniciativa grátis que ajuda você a maximizar seus lucros com apostas em futebol. ',
     image: '/cariri.png',
+    link: 'https://cariritips.com.br',
   },
 ]
 
@@ -59,25 +61,27 @@ function ShinyCard({
 function ProjectCard({ project }: { project: Project }) {
   return (
     <ShinyCard className="group h-full max-w-96">
-      <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 overflow-hidden h-full flex flex-col max-w-96">
-        <div className="relative w-full h-48 overflow-hidden">
-          <Image
-            src={project.image}
-            alt={project.title}
-            quality={100}
-            priority
-            layout="fill"
-            objectFit="cover"
-            className="rounded-t-xl"
-          />
-        </div>
-        <CardContent className="p-4 flex-grow flex flex-col justify-between">
-          <h3 className="font-medium text-lg text-zinc-100 mb-2">
-            {project.title}
-          </h3>
-          <p className="text-sm text-zinc-400">{project.description}</p>
-        </CardContent>
-      </Card>
+      <Link href={project.link} target="_blank" rel="noopener noreferrer">
+        <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 overflow-hidden h-full flex flex-col max-w-96">
+          <div className="relative w-full h-48 overflow-hidden">
+            <Image
+              src={project.image}
+              alt={project.title}
+              quality={100}
+              priority
+              layout="fill"
+              objectFit="cover"
+              className="rounded-t-xl"
+            />
+          </div>
+          <CardContent className="p-4 flex-grow flex flex-col justify-between">
+            <h3 className="font-medium text-lg text-zinc-100 mb-2">
+              {project.title}
+            </h3>
+            <p className="text-sm text-zinc-400">{project.description}</p>
+          </CardContent>
+        </Card>
+      </Link>
     </ShinyCard>
   )
 }
