@@ -1,9 +1,16 @@
 'use client'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Github, GithubIcon, Globe, Linkedin, Mail } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
@@ -12,7 +19,8 @@ interface Project {
   title: string
   description: string
   image: string
-  link: string
+  linkWeb: string
+  linkGithub: string
 }
 
 const projects: Project[] = [
@@ -21,7 +29,8 @@ const projects: Project[] = [
     description:
       'A Cariri Tips é uma iniciativa grátis que ajuda você a maximizar seus lucros com apostas em futebol. ',
     image: '/cariri.png',
-    link: 'https://cariritips.com.br',
+    linkWeb: 'https://cariritips.com.br',
+    linkGithub: 'https://github.com/skrodrigo/cariritips.com.br',
   },
 ]
 
@@ -61,27 +70,49 @@ function ShinyCard({
 function ProjectCard({ project }: { project: Project }) {
   return (
     <ShinyCard className="group h-full max-w-96">
-      <Link href={project.link} target="_blank" rel="noopener noreferrer">
-        <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 overflow-hidden h-full flex flex-col max-w-96">
-          <div className="relative w-full h-48 overflow-hidden">
-            <Image
-              src={project.image}
-              alt={project.title}
-              quality={100}
-              priority
-              layout="fill"
-              objectFit="cover"
-              className="rounded-t-xl"
-            />
+      <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 overflow-hidden h-full flex flex-col max-w-96">
+        <div className="relative w-full h-48 overflow-hidden">
+          <Image
+            src={project.image}
+            alt={project.title}
+            quality={100}
+            priority
+            layout="fill"
+            objectFit="cover"
+            className="rounded-t-xl"
+          />
+        </div>
+        <CardContent className="p-4 flex-grow flex flex-col justify-between">
+          <h3 className="font-medium text-lg text-zinc-100 mb-2">
+            {project.title}
+          </h3>
+          <p className="text-sm text-zinc-400">{project.description}</p>
+        </CardContent>
+        <CardFooter className="flex pt-2 pl-4 gap-2 justify-start">
+          <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
+            <Globe className="h-4 w-4 mr-2" />
+            <Link
+              href={project.linkWeb}
+              target="_blank"
+              rel="noopener noreferrer"
+              className=""
+            >
+              Website
+            </Link>
           </div>
-          <CardContent className="p-4 flex-grow flex flex-col justify-between">
-            <h3 className="font-medium text-lg text-zinc-100 mb-2">
-              {project.title}
-            </h3>
-            <p className="text-sm text-zinc-400">{project.description}</p>
-          </CardContent>
-        </Card>
-      </Link>
+          <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
+            <GitHubLogoIcon className="h-4 w-4 mr-2" />
+            <Link
+              href={project.linkGithub}
+              target="_blank"
+              rel="noopener noreferrer"
+              className=""
+            >
+              Github
+            </Link>
+          </div>
+        </CardFooter>
+      </Card>
     </ShinyCard>
   )
 }
