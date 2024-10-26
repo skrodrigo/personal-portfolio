@@ -238,7 +238,9 @@ export default function Component() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <h2 className="text-xl font-semibold mb-4 text-white">Formação</h2>
+            <h2 className="text-xl font-semibold mb-4 text-white">
+              🎓 Formação
+            </h2>
             <div className="space-y-4">
               <div className="border-b border-zinc-900 pb-4 space-y-1">
                 <h3 className="font-medium text-zinc-100">
@@ -263,15 +265,15 @@ export default function Component() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <h2 className="text-xl font-semibold mb-4 text-white">Stack</h2>
+            <h2 className="text-xl font-semibold mb-4 text-white">⚙ Stack</h2>
             <div className="space-y-4">
-              <div className="flex justify-start items-center border-b border-zinc-900 pb-4 gap-2 ">
+              <div className="flex justify-start items-center border-b border-zinc-900 pb-4 gap-2 w-full xs:overflow-hidden overflow-scroll ">
                 {techs.map(tech => (
                   <img
                     src={tech.image}
                     alt={tech.title}
                     key={tech.title}
-                    className="h-14 w-14 grayscale hover:grayscale-0  duration-500"
+                    className="h-12 w-12 grayscale hover:grayscale-0  duration-500"
                   />
                 ))}
               </div>
@@ -282,7 +284,7 @@ export default function Component() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <h2 className="text-xl font-semibold mb-4">Projetos</h2>
+            <h2 className="text-xl font-semibold mb-4">📦 Projetos</h2>
             <div className="grid grid-cols-1 gap-4">
               {projects.map((project, index) => (
                 <motion.div
@@ -301,7 +303,7 @@ export default function Component() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <h2 className="text-xl font-semibold mb-2">Serviços</h2>
+            <h2 className="text-xl font-semibold mb-2">🛠 Serviços</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
               <ShinyCard className="group h-full">
                 <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 transition-colors h-full">
