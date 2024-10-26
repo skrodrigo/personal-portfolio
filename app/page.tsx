@@ -8,9 +8,13 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { GitHubLogoIcon } from '@radix-ui/react-icons'
+import {
+  EnvelopeClosedIcon,
+  GitHubLogoIcon,
+  GlobeIcon,
+  LinkedInLogoIcon,
+} from '@radix-ui/react-icons'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Github, GithubIcon, Globe, Linkedin, Mail } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
@@ -23,6 +27,12 @@ interface Project {
   linkGithub: string
 }
 
+interface Tech {
+  title: string
+  description: string
+  image: string
+}
+
 const projects: Project[] = [
   {
     title: 'Cariri Tips',
@@ -31,6 +41,51 @@ const projects: Project[] = [
     image: '/cariri.png',
     linkWeb: 'https://cariritips.com.br',
     linkGithub: 'https://github.com/skrodrigo/cariritips.com.br',
+  },
+]
+
+const techs: Tech[] = [
+  {
+    title: 'Next.js',
+    description:
+      'O Next.js é um framework de React que permite renderização do lado do servidor.',
+    image: 'https://skillicons.dev/icons?i=next',
+  },
+  {
+    title: 'React',
+    description:
+      'O React é uma biblioteca JavaScript para criar interfaces de usuário.',
+    image: 'https://skillicons.dev/icons?i=react',
+  },
+  {
+    title: 'Tailwind CSS',
+    description:
+      'O Tailwind CSS é um framework CSS que permite criar estilos rapidamente.',
+    image: 'https://skillicons.dev/icons?i=tailwind',
+  },
+  {
+    title: 'Node.js',
+    description:
+      'O Node.js é um ambiente de execução JavaScript que permite rodar JavaScript no servidor.',
+    image: 'https://skillicons.dev/icons?i=nodejs',
+  },
+  {
+    title: 'TypeScript',
+    description:
+      'O TypeScript é um superconjunto de JavaScript que adiciona tipagem estática ao código.',
+    image: 'https://skillicons.dev/icons?i=ts',
+  },
+  {
+    title: 'PostgreSQL',
+    description:
+      'O PostgreSQL é um sistema de gerenciamento de banco de dados relacional.',
+    image: 'https://skillicons.dev/icons?i=postgres',
+  },
+  {
+    title: 'Docker',
+    description:
+      'O Docker é uma plataforma de software que permite criar, testar e implantar aplicativos rapidamente.',
+    image: 'https://skillicons.dev/icons?i=docker',
   },
 ]
 
@@ -90,7 +145,7 @@ function ProjectCard({ project }: { project: Project }) {
         </CardContent>
         <CardFooter className="flex pt-2 pl-4 gap-2 justify-start">
           <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
-            <Globe className="h-4 w-4 mr-2" />
+            <GlobeIcon className="h-4 w-4 mr-2" />
             <Link
               href={project.linkWeb}
               target="_blank"
@@ -132,7 +187,7 @@ export default function Component() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
-      className="min-h-screen bg-black text-white p-4 md:p-8"
+      className="min-h-screen bg-black text-white p-4 md:p-8 "
     >
       <Card className="bg-black text-white border border-zinc-900 shadow-lg">
         <CardHeader className="flex flex-row items-center justify-between border-b border-zinc-900 pb-4 gap-4">
@@ -162,17 +217,17 @@ export default function Component() {
           <div className="sm:space-x-3 gap-3 sm:gap-0 flex flex-col sm:flex-row items-start justify-start">
             <motion.div whileHover={{ scale: 1.1 }}>
               <Link href="https://gmail.com" target="_blank">
-                <Mail className="h-5 w-5 text-zinc-400 hover:text-white transition-colors " />
+                <EnvelopeClosedIcon className="h-5 w-5 text-zinc-400 hover:text-white transition-colors " />
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.1 }}>
               <Link href="https://github.com/skrodrigo" target="_blank">
-                <Github className="h-5 w-5 text-zinc-400 hover:text-white transition-colors" />
+                <GitHubLogoIcon className="h-5 w-5 text-zinc-400 hover:text-white transition-colors" />
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.1 }}>
               <Link href="https://linkedin.com/in/skrodrigo" target="_blank">
-                <Linkedin className="h-5 w-5 text-zinc-400 hover:text-white transition-colors" />
+                <LinkedInLogoIcon className="h-5 w-5 text-zinc-400 hover:text-white transition-colors" />
               </Link>
             </motion.div>
           </div>
@@ -200,6 +255,25 @@ export default function Component() {
                 <p className="text-sm text-zinc-400">
                   EEEP Antonia Nedina Onofre de Paiva (2020 - 2022)
                 </p>
+              </div>
+            </div>
+          </motion.section>
+          <motion.section
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            <h2 className="text-xl font-semibold mb-4 text-white">Stack</h2>
+            <div className="space-y-4">
+              <div className="flex justify-start items-center border-b border-zinc-900 pb-4 gap-2 ">
+                {techs.map(tech => (
+                  <img
+                    src={tech.image}
+                    alt={tech.title}
+                    key={tech.title}
+                    className="h-14 w-14 grayscale hover:grayscale-0  duration-500"
+                  />
+                ))}
               </div>
             </div>
           </motion.section>
