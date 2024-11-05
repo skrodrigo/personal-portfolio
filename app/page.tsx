@@ -40,7 +40,15 @@ const projects: Project[] = [
       'A Cariri Tips é uma iniciativa grátis que ajuda você a maximizar seus lucros com apostas em futebol. ',
     image: '/cariri.png',
     linkWeb: 'https://cariritips.com.br',
-    linkGithub: 'https://github.com/skrodrigo/cariritips.com.br',
+    linkGithub: 'https://github.com/skrodrigo/cariritips-nextjs-web-project',
+  },
+  {
+    title: 'Trakio',
+    description:
+      'Trakio é uma aplicação de monitoramento de métricas que permite aos usuários criar, acompanhar e visualizar métricas personalizadas em gráficos interativos e dinâmicos.',
+    image: '/trakio.png',
+    linkWeb: 'https://usetrakio.vercel.app',
+    linkGithub: 'https://github.com/skrodrigo/trakio',
   },
 ]
 
@@ -271,7 +279,7 @@ export default function Component() {
                     src={tech.image}
                     alt={tech.title}
                     key={tech.title}
-                    className="h-12 w-12   duration-500"
+                    className="h-12 w-12 duration-500"
                   />
                 ))}
               </div>
@@ -283,7 +291,7 @@ export default function Component() {
             transition={{ delay: 0.4 }}
           >
             <h2 className="text-xl font-semibold mb-4">Projetos</h2>
-            <div className="grid grid-cols-1 gap-4">
+            <div className="flex-col sm:flex-row flex gap-4">
               {projects.map((project, index) => (
                 <motion.div
                   key={project.title}
