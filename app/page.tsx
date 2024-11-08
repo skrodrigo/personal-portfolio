@@ -47,7 +47,7 @@ const projects: Project[] = [
     description:
       'Trakio é uma aplicação de monitoramento de métricas que permite aos usuários criar, acompanhar e visualizar métricas personalizadas em gráficos interativos e dinâmicos.',
     image: '/trakio.png',
-    linkWeb: 'https://usetrakio.vercel.app',
+    linkWeb: 'https://trakio.vercel.app',
     linkGithub: 'https://github.com/skrodrigo/trakio',
   },
 ]
