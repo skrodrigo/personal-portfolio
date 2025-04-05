@@ -215,21 +215,15 @@ export default function Component() {
             </div>
           </div>
           <div className="sm:space-x-3 gap-3 sm:gap-0 flex flex-col sm:flex-row items-start justify-start">
-            <motion.div whileHover={{ scale: 1.1 }}>
               <Link href="https://gmail.com" target="_blank">
-                <EnvelopeClosedIcon className="h-5 w-5 text-zinc-400 hover:text-white transition-colors " />
+                <EnvelopeClosedIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors " />
               </Link>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.1 }}>
               <Link href="https://github.com/skrodrigo" target="_blank">
-                <GitHubLogoIcon className="h-5 w-5 text-zinc-400 hover:text-white transition-colors" />
+                <GitHubLogoIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors" />
               </Link>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.1 }}>
               <Link href="https://linkedin.com/in/skrodrigo" target="_blank">
-                <LinkedInLogoIcon className="h-5 w-5 text-zinc-400 hover:text-white transition-colors" />
+                <LinkedInLogoIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors" />
               </Link>
-            </motion.div>
           </div>
         </CardHeader>
         <CardContent className="space-y-8 pt-6">
@@ -294,59 +288,6 @@ export default function Component() {
                   <ProjectCard project={project} />
                 </motion.div>
               ))}
-            </div>
-          </motion.section>
-          <motion.section
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.6 }}
-          >
-            <h2 className="text-xl font-semibold mb-2">Serviços</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-              <ShinyCard className="group h-full">
-                <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 transition-colors h-full">
-                  <CardContent className="p-4 h-full flex flex-col justify-between">
-                    <h3 className="font-medium mb-2 text-zinc-100">
-                      Criação de Interfaces Modernas
-                    </h3>
-                    <p className="text-sm text-zinc-400">
-                      Desenvolvimento de interfaces intuitivas e responsivas
-                      para seu site ou aplicativo, garantindo uma experiência de
-                      usuário excelente.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ShinyCard>
-
-              <ShinyCard className="group h-full">
-                <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 transition-colors h-full">
-                  <CardContent className="p-4 h-full flex flex-col justify-between">
-                    <h3 className="font-medium mb-2 text-zinc-100">
-                      Consultoria em UX/UI
-                    </h3>
-                    <p className="text-sm text-zinc-400">
-                      Obtenha orientação sobre boas práticas de design e
-                      estratégias para melhorar a experiência e usabilidade dos
-                      seus projetos.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ShinyCard>
-
-              <ShinyCard className="group h-full w-full md:col-span-2">
-                <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 transition-colors h-full">
-                  <CardContent className="p-4 h-full flex flex-col justify-between">
-                    <h3 className="font-medium mb-2 text-zinc-100">
-                      Desenvolvimento Full Stack
-                    </h3>
-                    <p className="text-sm text-zinc-400">
-                      Construo aplicações completas, desde o back-end ao
-                      front-end, prontas para escalar e atender às necessidades
-                      do seu negócio.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ShinyCard>
             </div>
           </motion.section>
         </CardContent>
