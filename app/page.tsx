@@ -58,16 +58,16 @@ const techs: Tech[] = [
     image: 'https://skillicons.dev/icons?i=react',
   },
   {
-    title: 'Tailwind CSS',
-    description:
-      'O Tailwind CSS é um framework CSS que permite criar estilos rapidamente.',
-    image: 'https://skillicons.dev/icons?i=tailwind',
-  },
-  {
     title: 'Node.js',
     description:
       'O Node.js é um ambiente de execução JavaScript que permite rodar JavaScript no servidor.',
     image: 'https://skillicons.dev/icons?i=nodejs',
+  },
+  {
+    title: 'Python',
+    description:
+      '',
+    image: 'https://skillicons.dev/icons?i=python',
   },
   {
     title: 'TypeScript',
@@ -76,16 +76,16 @@ const techs: Tech[] = [
     image: 'https://skillicons.dev/icons?i=ts',
   },
   {
-    title: 'PostgreSQL',
+    title: 'Prisma',
     description:
       'O PostgreSQL é um sistema de gerenciamento de banco de dados relacional.',
-    image: 'https://skillicons.dev/icons?i=postgres',
+    image: 'https://skillicons.dev/icons?i=prisma',
   },
   {
-    title: 'Docker',
+    title: 'AWS',
     description:
       'O Docker é uma plataforma de software que permite criar, testar e implantar aplicativos rapidamente.',
-    image: 'https://skillicons.dev/icons?i=docker',
+    image: 'https://skillicons.dev/icons?i=aws',
   },
 ]
 
