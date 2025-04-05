@@ -35,20 +35,12 @@ interface Tech {
 
 const projects: Project[] = [
   {
-    title: 'Cariri Tips',
+    title: 'Sintesy',
     description:
-      'A Cariri Tips é uma iniciativa grátis que ajuda você a maximizar seus lucros com apostas em futebol. ',
-    image: '/cariri.png',
-    linkWeb: 'https://cariritips.com.br',
-    linkGithub: 'https://github.com/skrodrigo/cariritips-nextjs-web-project',
-  },
-  {
-    title: 'Trakio',
-    description:
-      'Trakio é uma aplicação de monitoramento de métricas que permite aos usuários criar, acompanhar e visualizar métricas personalizadas em gráficos interativos e dinâmicos.',
-    image: '/trakio.png',
-    linkWeb: 'https://trakio.vercel.app',
-    linkGithub: 'https://github.com/skrodrigo/trakio',
+      'Sintesy ouve suas ideias, reuniões, planejamentos e cria uma linha contínua de raciocinio com anotações, tópicos, checklists e muito mais! Optimizando em 10x seus fluxos de trabalho.',
+    image: '/sintesy.png',
+    linkWeb: 'https://sintesy.me/',
+    linkGithub: 'https://github.com/skrodrigo',
   },
 ]
 
