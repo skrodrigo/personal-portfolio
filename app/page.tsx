@@ -1,6 +1,7 @@
 'use client'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
 import {
   Card,
   CardContent,
@@ -215,15 +216,29 @@ export default function Component() {
             </div>
           </div>
           <div className="sm:space-x-3 gap-3 sm:gap-0 flex flex-col sm:flex-row items-start justify-start">
-              <Link href="https://gmail.com" target="_blank">
-                <EnvelopeClosedIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors " />
-              </Link>
-              <Link href="https://github.com/skrodrigo" target="_blank">
-                <GitHubLogoIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors" />
-              </Link>
-              <Link href="https://linkedin.com/in/skrodrigo" target="_blank">
-                <LinkedInLogoIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors" />
-              </Link>
+          <Link
+  href="https://gmail.com"
+  target="_blank"
+  className="bg-gradient-to-r from-red-500 to-red-600 p-2 rounded-md"
+>
+  <EnvelopeClosedIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors" />
+</Link>
+
+<Link
+  href="https://github.com/skrodrigo"
+  target="_blank"
+  className="bg-gradient-to-r from-zinc-500 to-gray-700 p-2 rounded-md"
+>
+  <GitHubLogoIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors" />
+</Link>
+
+<Link
+  href="https://linkedin.com/in/skrodrigo"
+  target="_blank"
+  className="bg-gradient-to-r from-blue-500 to-blue-700 p-2 rounded-md"
+>
+  <LinkedInLogoIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors" />
+</Link>
           </div>
         </CardHeader>
         <CardContent className="space-y-8 pt-6">
@@ -249,6 +264,35 @@ export default function Component() {
                 <p className="text-sm text-zinc-400">
                   EEEP Antonia Nedina Onofre de Paiva (2020 - 2022)
                 </p>
+              </div>
+            </div>
+          </motion.section>
+          <motion.section
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            <h2 className="text-xl font-semibold mb-4 text-white">Experiência</h2>
+            <div className="space-y-4">
+              <div className="border-b border-zinc-900 pb-4 space-y-1">
+                <span className='text-zinc-400 text-xs'>12/2024 - 5/2025</span>
+                <h3 className="font-medium text-zinc-100">  
+                  Artificial Intelligence with AWS @ Compass UOL 
+                </h3>
+                <p className="text-sm text-zinc-400">
+                Desenvolvimento de chatbots utilizando linguagens como: Python e Node.js. Em ambientes de cloud AWS com os serviços EC2, Lambda, S3, API Gateway e Docker.
+                </p>
+                <div className='space-x-2'>
+                  <Badge variant='secondary'>
+                    Node.js
+                  </Badge>
+                  <Badge variant='secondary'>
+                    Python
+                  </Badge>
+                  <Badge variant='secondary'>
+                    AI/ML
+                  </Badge>
+                </div>
               </div>
             </div>
           </motion.section>
