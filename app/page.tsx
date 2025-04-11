@@ -14,6 +14,7 @@ import {
   GitHubLogoIcon,
   GlobeIcon,
   LinkedInLogoIcon,
+  TwitterLogoIcon,
 } from '@radix-ui/react-icons'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
@@ -26,6 +27,7 @@ interface Project {
   image: string
   linkWeb: string
   linkGithub: string
+  technologies: string[]
 }
 
 interface Tech {
@@ -40,8 +42,9 @@ const projects: Project[] = [
     description:
       'Sintesy ouve suas ideias, reuniões, planejamentos e cria uma linha contínua de raciocinio com anotações, tópicos, checklists e muito mais! Optimizando em 10x seus fluxos de trabalho.',
     image: '/sintesy.png',
-    linkWeb: 'https://sintesy.me/',
+    linkWeb: 'https://dashboard.sintesy.me/',
     linkGithub: 'https://github.com/skrodrigo',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind'],
   },
 ]
 
@@ -138,11 +141,20 @@ function ProjectCard({ project }: { project: Project }) {
             className="rounded-t-xl"
           />
         </div>
-        <CardContent className="p-4 flex-grow flex flex-col justify-between">
-          <h3 className="font-medium text-lg text-zinc-100 mb-2">
-            {project.title}
-          </h3>
-          <p className="text-sm text-zinc-400">{project.description}</p>
+        <CardContent className="p-4 flex-grow flex flex-col justify-between space-y-4">
+          <div>
+            <h3 className="font-medium text-lg text-zinc-100 mb-2">
+              {project.title}
+            </h3>
+            <p className="text-sm text-zinc-400">{project.description}</p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {project.technologies.map((tech) => (
+              <Badge key={tech} variant="secondary" className='bg-blue-500/20 text-blue-500'>
+                {tech}
+              </Badge>
+            ))}
+          </div>
         </CardContent>
         <CardFooter className="flex pt-2 pl-4 gap-2 justify-start">
           <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
@@ -188,60 +200,35 @@ export default function Component() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
-      className="min-h-screen bg-black text-white p-4 md:p-8 "
+      className="min-h-screen bg-black text-white"
     >
-      <Card className="bg-black text-white border border-zinc-900 shadow-lg">
-        <CardHeader className="flex flex-row items-center justify-between border-b border-zinc-900 pb-4 gap-4">
-          <div className="flex items-center space-x-4">
-            <div className="relative">
-              <Avatar className="w-20 h-20 relative z-10">
+      <div className="flex flex-col md:flex-row">
+        <aside className="md:w-1/3 md:h-screen md:sticky top-0">
+          <div className="flex flex-col items-center md:justify-start md:items-start p-8 space-y-4">
+            <div className="flex flex-col items-center space-y-4">
+              <Avatar className="w-40 h-40 md:w-60 md:h-60 relative z-10">
                 <AvatarImage src="/perfil.png" alt="Rodrigo Carvalho" />
                 <AvatarFallback>RC</AvatarFallback>
               </Avatar>
-              <AnimatePresence>
-                {ripple && (
-                  <motion.div
-                    initial={{ scale: 0.8, opacity: 1 }}
-                    animate={{ scale: 1.2, opacity: 0 }}
-                    exit={{ scale: 1.2, opacity: 0 }}
-                    transition={{ duration: 2, ease: 'easeOut' }}
-                    className="absolute inset-0 bg-blue-500 rounded-full"
-                  />
-                )}
-              </AnimatePresence>
-            </div>
-            <div>
+            <div  className='ml-0 flex justify-center flex-col items-center md:items-start md:-ml-14'>
               <CardTitle className="text-xl">Rodrigo Carvalho</CardTitle>
               <p className="text-sm text-zinc-400">Desenvolvedor Junior</p>
             </div>
+            <div className='flex justify-center md:justify-start md:-ml-[132px] ml-0 items-center md:items-start '>
+              <Link href="https://www.linkedin.com/in/skrodrigo" target="_blank" rel="noopener noreferrer">
+                <LinkedInLogoIcon className="h-5 w-5 mr-2" />
+              </Link>
+              <Link href="https://github.com/skrodrigo" target="_blank" rel="noopener noreferrer">
+                <GitHubLogoIcon className="h-5 w-5 mr-2" />
+              </Link>
+              <Link href="https://www.instagram.com/skrodrigo" target="_blank" rel="noopener noreferrer">
+                <EnvelopeClosedIcon className="h-5 w-5 mr-2" />
+              </Link>
+            </div>
+            </div>
           </div>
-          <div className="sm:space-x-3 gap-3 sm:gap-0 flex flex-col sm:flex-row items-start justify-start">
-          <Link
-  href="https://gmail.com"
-  target="_blank"
-  className="bg-gradient-to-r from-red-500 to-red-600 p-2 rounded-md"
->
-  <EnvelopeClosedIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors" />
-</Link>
-
-<Link
-  href="https://github.com/skrodrigo"
-  target="_blank"
-  className="bg-gradient-to-r from-zinc-500 to-gray-700 p-2 rounded-md"
->
-  <GitHubLogoIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors" />
-</Link>
-
-<Link
-  href="https://linkedin.com/in/skrodrigo"
-  target="_blank"
-  className="bg-gradient-to-r from-blue-500 to-blue-700 p-2 rounded-md"
->
-  <LinkedInLogoIcon className="h-5 w-5 text-zinc-50 hover:text-white transition-colors" />
-</Link>
-          </div>
-        </CardHeader>
-        <CardContent className="space-y-8 pt-6">
+        </aside>
+        <main className="flex-1 p-4 md:p-8 space-y-8 overflow-y-auto">
           <motion.section
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -292,6 +279,9 @@ export default function Component() {
                   <Badge variant='secondary'>
                     AI/ML
                   </Badge>
+                  <Badge variant='secondary'>
+                    AWS
+                  </Badge>
                 </div>
               </div>
             </div>
@@ -334,8 +324,8 @@ export default function Component() {
               ))}
             </div>
           </motion.section>
-        </CardContent>
-      </Card>
+        </main>
+      </div>
     </motion.div>
   )
 }
