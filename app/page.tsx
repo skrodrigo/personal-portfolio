@@ -3,202 +3,24 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardTitle,
+  CardTitle
 } from '@/components/ui/card'
 import {
+  ArrowRightIcon,
+  ArrowTopRightIcon,
   EnvelopeClosedIcon,
   GitHubLogoIcon,
-  GlobeIcon,
   LinkedInLogoIcon,
+  ThickArrowRightIcon,
 } from '@radix-ui/react-icons'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-
-interface Project {
-  title: string
-  description: string
-  image: string
-  linkWeb: string
-  linkGithub: string
-  technologies: string[]
-}
-
-interface Tech {
-  title: string
-  description: string
-  image: string
-}
-
-const projects: Project[] = [
-  {
-    title: 'Sintesy',
-    description:
-      'Sintesy ouve suas ideias, reuniões, planejamentos e cria uma linha contínua de raciocinio com anotações, tópicos, checklists e muito mais! Optimizando em 10x seus fluxos de trabalho.',
-    image: '/sintesy.png',
-    linkWeb: 'https://dashboard.sintesy.me/',
-    linkGithub: 'https://github.com/skrodrigo',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind'],
-  },
-]
-
-const techs: Tech[] = [
-  {
-    title: 'Next.js',
-    description:
-      'O Next.js é um framework de React que permite renderização do lado do servidor.',
-    image: 'https://skillicons.dev/icons?i=next',
-  },
-  {
-    title: 'React',
-    description:
-      'O React é uma biblioteca JavaScript para criar interfaces de usuário.',
-    image: 'https://skillicons.dev/icons?i=react',
-  },
-  {
-    title: 'Node.js',
-    description:
-      'O Node.js é um ambiente de execução JavaScript que permite rodar JavaScript no servidor.',
-    image: 'https://skillicons.dev/icons?i=nodejs',
-  },
-  {
-    title: 'Python',
-    description:
-      '',
-    image: 'https://skillicons.dev/icons?i=python',
-  },
-  {
-    title: 'TypeScript',
-    description:
-      'O TypeScript é um superconjunto de JavaScript que adiciona tipagem estática ao código.',
-    image: 'https://skillicons.dev/icons?i=ts',
-  },
-  {
-    title: 'Go',
-    description:
-      'O Go é uma linguagem de programação de alto desempenho e baixo nível.',
-    image: 'https://skillicons.dev/icons?i=go',
-  },
-  {
-    title: 'Prisma',
-    description:
-      'O PostgreSQL é um sistema de gerenciamento de banco de dados relacional.',
-    image: 'https://skillicons.dev/icons?i=prisma',
-  },
-  {
-    title: 'AWS',
-    description:
-      'O Docker é uma plataforma de software que permite criar, testar e implantar aplicativos rapidamente.',
-    image: 'https://skillicons.dev/icons?i=aws',
-  },
-]
-
-function ShinyCard({
-  children,
-  className = '',
-}: { children: React.ReactNode; className?: string }) {
-  const [position, setPosition] = useState<{ x: number; y: number }>({
-    x: 0,
-    y: 0,
-  })
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect()
-    setPosition({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    })
-  }
-
-  return (
-    <div
-      className={`relative overflow-hidden rounded-xl ${className}`}
-      onMouseMove={handleMouseMove}
-    >
-      <div
-        className="pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
-        style={{
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.1), transparent 40%)`,
-        }}
-      />
-      {children}
-    </div>
-  )
-}
-
-function ProjectCard({ project }: { project: Project }) {
-  return (
-    <ShinyCard className="group h-full max-w-96">
-      <Card className="bg-zinc-950 border border-zinc-900 hover:border-zinc-500 overflow-hidden h-full flex flex-col max-w-96">
-        <div className="relative w-full h-48 overflow-hidden">
-          <Image
-            src={project.image}
-            alt={project.title}
-            quality={100}
-            priority
-            layout="fill"
-            objectFit="cover"
-            className="rounded-t-xl"
-          />
-        </div>
-        <CardContent className="p-4 flex-grow flex flex-col justify-between space-y-4">
-          <div>
-            <h3 className="font-medium text-lg text-zinc-100 mb-2">
-              {project.title}
-            </h3>
-            <p className="text-sm text-zinc-400">{project.description}</p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech) => (
-              <Badge key={tech} variant="secondary" className='bg-blue-500/20 text-blue-500'>
-                {tech}
-              </Badge>
-            ))}
-          </div>
-        </CardContent>
-        <CardFooter className="flex pt-2 pl-4 gap-2 justify-start">
-          <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
-            <GlobeIcon className="h-4 w-4 mr-2" />
-            <Link
-              href={project.linkWeb}
-              target="_blank"
-              rel="noopener noreferrer"
-              className=""
-            >
-              Website
-            </Link>
-          </div>
-          <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
-            <GitHubLogoIcon className="h-4 w-4 mr-2" />
-            <Link
-              href={project.linkGithub}
-              target="_blank"
-              rel="noopener noreferrer"
-              className=""
-            >
-              Github
-            </Link>
-          </div>
-        </CardFooter>
-      </Card>
-    </ShinyCard>
-  )
-}
+import { projects } from './data/projects'
+import { techs } from './data/tech'
+import ProjectCard from './components/project-card'
 
 export default function Component() {
-  const [, setRipple] = useState(false)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRipple(prev => !prev)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -361,6 +183,16 @@ export default function Component() {
                 </motion.div>
               ))}
             </div>
+          </motion.section>
+          <motion.section
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            <Link href="/blog" className="group transition-colors flex items-center">
+              <h2 className="text-xl font-semibold hover:opacity-90">Blog</h2>
+              <ArrowTopRightIcon className="h-3 w-3 ml-1 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </motion.section>
         </main>
       </div>
