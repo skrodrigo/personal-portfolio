@@ -6,7 +6,6 @@ import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader,
   CardTitle,
 } from '@/components/ui/card'
 import {
@@ -14,9 +13,8 @@ import {
   GitHubLogoIcon,
   GlobeIcon,
   LinkedInLogoIcon,
-  TwitterLogoIcon,
 } from '@radix-ui/react-icons'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
@@ -78,6 +76,12 @@ const techs: Tech[] = [
     description:
       'O TypeScript é um superconjunto de JavaScript que adiciona tipagem estática ao código.',
     image: 'https://skillicons.dev/icons?i=ts',
+  },
+  {
+    title: 'Go',
+    description:
+      'O Go é uma linguagem de programação de alto desempenho e baixo nível.',
+    image: 'https://skillicons.dev/icons?i=go',
   },
   {
     title: 'Prisma',
@@ -186,7 +190,7 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export default function Component() {
-  const [ripple, setRipple] = useState(false)
+  const [, setRipple] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -210,21 +214,21 @@ export default function Component() {
                 <AvatarImage src="/perfil.png" alt="Rodrigo Carvalho" />
                 <AvatarFallback>RC</AvatarFallback>
               </Avatar>
-            <div  className='ml-0 flex justify-center flex-col items-center md:items-start md:-ml-14'>
-              <CardTitle className="text-xl">Rodrigo Carvalho</CardTitle>
-              <p className="text-sm text-zinc-400">Desenvolvedor Junior</p>
-            </div>
-            <div className='flex justify-center md:justify-start md:-ml-[132px] ml-0 items-center md:items-start '>
-              <Link href="https://www.linkedin.com/in/skrodrigo" target="_blank" rel="noopener noreferrer">
-                <LinkedInLogoIcon className="h-5 w-5 mr-2" />
-              </Link>
-              <Link href="https://github.com/skrodrigo" target="_blank" rel="noopener noreferrer">
-                <GitHubLogoIcon className="h-5 w-5 mr-2" />
-              </Link>
-              <Link href="https://www.instagram.com/skrodrigo" target="_blank" rel="noopener noreferrer">
-                <EnvelopeClosedIcon className="h-5 w-5 mr-2" />
-              </Link>
-            </div>
+              <div className='ml-0 flex justify-center flex-col items-center md:items-start md:-ml-14'>
+                <CardTitle className="text-xl">Rodrigo Carvalho</CardTitle>
+                <p className="text-sm text-zinc-400">Desenvolvedor Junior</p>
+              </div>
+              <div className='flex justify-center md:justify-start md:-ml-[132px] ml-0 items-center md:items-start '>
+                <Link href="https://www.linkedin.com/in/skrodrigo" target="_blank" rel="noopener noreferrer">
+                  <LinkedInLogoIcon className="h-5 w-5 mr-2" />
+                </Link>
+                <Link href="https://github.com/skrodrigo" target="_blank" rel="noopener noreferrer">
+                  <GitHubLogoIcon className="h-5 w-5 mr-2" />
+                </Link>
+                <Link href="https://www.instagram.com/skrodrigo" target="_blank" rel="noopener noreferrer">
+                  <EnvelopeClosedIcon className="h-5 w-5 mr-2" />
+                </Link>
+              </div>
             </div>
           </div>
         </aside>
@@ -260,14 +264,48 @@ export default function Component() {
             transition={{ delay: 0.2 }}
           >
             <h2 className="text-xl font-semibold mb-4 text-white">Experiência</h2>
+            <div className="space-y-4 mb-4">
+              <div className="border-b border-zinc-900 pb-4 space-y-1">
+                <span className='text-zinc-400 text-xs'>12/2024 - Now</span>
+                <h3 className="font-medium text-zinc-100">
+                  CTO & Co-Founder @ Sintesy
+                </h3>
+                <p className="text-sm text-zinc-400 max-w-2xl">
+                  Sintesy, um aplicativo capaz de transcrever e resumir: aulas, palestras, vídeos e criar anotações para você nunca esquecer qualquer conteúdo.
+                  <br />
+                  <br />
+                  Responsável pelo Desenvolvimento Web da plataforma, utilizando React, Next.js, Tailwind CSS, Context API e Axios, com foco em performance, escalabilidade e experiência do usuário.
+                  <br />
+                  <br />
+                  Além do desenvolvimento técnico, liderei iniciativas de marketing estratégico e posicionamento digital, contribuindo significativamente para a expansão da base de usuários, impactando mais de 1.500 leads com a solução. Participando também ativamente de um programa de aceleração de startups no SebraeLAB, fortalecendo a evolução do produto e do negócio.
+                </p>
+                <div className='space-x-2'>
+                  <Badge variant='secondary'>
+                    Node.js
+                  </Badge>
+                  <Badge variant='secondary'>
+                    Python
+                  </Badge>
+                  <Badge variant='secondary'>
+                    Marketing
+                  </Badge>
+                  <Badge variant='secondary'>
+                    Liderança
+                  </Badge>
+                </div>
+              </div>
+            </div>
             <div className="space-y-4">
               <div className="border-b border-zinc-900 pb-4 space-y-1">
                 <span className='text-zinc-400 text-xs'>12/2024 - 5/2025</span>
-                <h3 className="font-medium text-zinc-100">  
-                  Artificial Intelligence with AWS @ Compass UOL 
+                <h3 className="font-medium text-zinc-100">
+                  Artificial Intelligence with AWS @ Compass UOL
                 </h3>
-                <p className="text-sm text-zinc-400">
-                Desenvolvimento de chatbots utilizando linguagens como: Python e Node.js. Em ambientes de cloud AWS com os serviços EC2, Lambda, S3, API Gateway e Docker.
+                <p className="text-sm text-zinc-400 max-w-2xl">
+                  Durante meu estágio na trilha de Inteligência Artificial com AWS, desenvolvi chatbots inteligentes utilizando Python e Node.js, integrando serviços como AWS Lambda, EC2, S3, Textract, Bedrock, API Gateway e CloudWatch Logs. Estruturei arquiteturas serverless com foco em alta disponibilidade, escalabilidade automática e observabilidade em tempo real.
+                  <br />
+                  <br />
+                  Implementei pipelines com Docker para ambientes conteinerizados, orquestrei instâncias EC2 e criei imagens otimizadas para produção. Participei ativamente de sprints ágeis com Scrum e Kanban, contribuindo em equipe para entregar soluções robustas, funcionais e alinhadas às melhores práticas de arquitetura na nuvem.
                 </p>
                 <div className='space-x-2'>
                   <Badge variant='secondary'>
