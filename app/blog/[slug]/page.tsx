@@ -56,12 +56,15 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <div className="min-h-screen bg-black text-white p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
-        <Link href="/blog" className="inline-flex items-center text-zinc-400 border rounded-full p-2 justify-center hover:text-zinc-200 mb-8 group">
-          <ArrowLeftIcon className="h-4 w-4" />
+        <Link href="/blog" className="text-zinc-400 flex items-center gap-2 ml-4">
+          <div className='inline-flex items-center border rounded-full p-2 justify-center hover:text-zinc-200  group'>
+            <ArrowLeftIcon className="h-4 w-4" />
+          </div>
+          voltar
         </Link>
 
         <ShinyCard>
-          <Card className="bg-zinc-950 border border-zinc-900 overflow-hidden">
+          <Card className="bg-transparent border-none overflow-hidden">
             <CardContent className="p-8">
               <header className="mb-12">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400 mb-6">

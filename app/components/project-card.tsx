@@ -5,15 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { GlobeIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
+import { Project } from '../types/interfaces'
 
-interface Project {
-  title: string
-  description: string
-  image: string
-  linkWeb: string
-  linkGithub: string
-  technologies: string[]
-}
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
@@ -46,17 +39,30 @@ export default function ProjectCard({ project }: { project: Project }) {
           </div>
         </CardContent>
         <CardFooter className="flex pt-2 pl-4 gap-2 justify-start">
-          <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
-            <GlobeIcon className="h-4 w-4 mr-2" />
-            <Link
-              href={project.linkWeb}
-              target="_blank"
-              rel="noopener noreferrer"
-              className=""
-            >
-              Website
-            </Link>
-          </div>
+          {project?.LandingPage && (
+            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
+              <Link
+                href={project?.LandingPage}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex "
+              >
+                Landing Page
+              </Link>
+            </div>
+          )}
+          {project?.Dashboard && (
+            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
+              <Link
+                href={project?.Dashboard}
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
+                Dashboard
+              </Link>
+            </div>
+          )}
           <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
             <GitHubLogoIcon className="h-4 w-4 mr-2" />
             <Link
@@ -70,6 +76,6 @@ export default function ProjectCard({ project }: { project: Project }) {
           </div>
         </CardFooter>
       </Card>
-    </ShinyCard>
+    </ShinyCard >
   )
 }

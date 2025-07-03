@@ -8,7 +8,8 @@ export interface Project {
   title: string
   description: string
   image: string
-  linkWeb: string
+  LandingPage?: string | null
+  Dashboard?: string | null
   linkGithub: string
   technologies: string[]
 }

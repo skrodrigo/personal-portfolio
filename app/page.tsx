@@ -6,19 +6,16 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import {
-  ArrowRightIcon,
   ArrowTopRightIcon,
   EnvelopeClosedIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
-  ThickArrowRightIcon,
 } from '@radix-ui/react-icons'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
+import ProjectCard from './components/project-card'
 import { projects } from './data/projects'
 import { techs } from './data/tech'
-import ProjectCard from './components/project-card'
 
 export default function Component() {
   return (
