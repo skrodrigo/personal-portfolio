@@ -87,7 +87,7 @@ export default function Component() {
               <div className="border-b border-zinc-900 pb-4 space-y-1">
                 <span className='text-zinc-400 text-xs'>12/2024 - Now</span>
                 <h3 className="font-medium text-zinc-100">
-                  CTO & Co-Founder @ Sintesy
+                  CEO & Co-Founder @ Sintesy
                 </h3>
                 <p className="text-sm text-zinc-400 max-w-2xl">
                   Sintesy, um aplicativo capaz de transcrever e resumir: aulas, palestras, vídeos e criar anotações para você nunca esquecer qualquer conteúdo.
