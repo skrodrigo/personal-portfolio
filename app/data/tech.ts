@@ -38,10 +38,10 @@ export const techs: Tech[] = [
     image: 'https://skillicons.dev/icons?i=go',
   },
   {
-    title: 'Prisma',
+    title: 'Figma',
     description:
-      'O PostgreSQL é um sistema de gerenciamento de banco de dados relacional.',
-    image: 'https://skillicons.dev/icons?i=prisma',
+      'O Figma é uma ferramenta de design de interface de usuário.',
+    image: 'https://skillicons.dev/icons?i=figma',
   },
   {
     title: 'AWS',
