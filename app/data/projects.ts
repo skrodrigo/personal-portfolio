@@ -9,6 +9,7 @@ export const projects: Project[] = [
     LandingPage: 'https://sintesy.me/',
     linkGithub: 'https://github.com/skrodrigo',
     technologies: ['Next.js', 'TypeScript', 'Tailwind'],
+    colorBadge: 'bg-blue-500/20 text-blue-500',
   },
   {
     title: 'Genesis',
@@ -24,6 +25,7 @@ export const projects: Project[] = [
       'Tailwind CSS',
       'Shadcn UI',
     ],
+    colorBadge: 'bg-violet-500/20 text-violet-500',
   },
   {
     title: 'Receitai',
@@ -42,5 +44,6 @@ export const projects: Project[] = [
       'NeonDB',
       'Cakto Pay',
     ],
+    colorBadge: 'bg-green-500/20 text-green-500',
   },
 ]
