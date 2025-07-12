@@ -12,4 +12,5 @@ export interface Project {
   Dashboard?: string | null
   linkGithub: string
   technologies: string[]
+  colorBadge: string
 }

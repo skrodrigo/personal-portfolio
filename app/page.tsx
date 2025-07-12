@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { CardTitle } from '@/components/ui/card'
 import {
   ArrowTopRightIcon,
+  CircleIcon,
   EnvelopeClosedIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
@@ -23,7 +24,7 @@ export default function Component() {
       transition={{ duration: 0.7 }}
       className="min-h-screen bg-black text-white"
     >
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row max-w-5xl mx-auto">
         <aside className="md:w-1/3 md:h-screen md:sticky top-0">
           <div className="flex flex-col items-center md:justify-start md:items-start p-8 space-y-4">
             <div className="flex flex-col items-center space-y-4">
@@ -34,6 +35,10 @@ export default function Component() {
               <div className="ml-0 flex justify-center flex-col items-center md:items-start md:-ml-14">
                 <CardTitle className="text-xl">Rodrigo Carvalho</CardTitle>
                 <p className="text-sm text-zinc-400">Desenvolvedor Junior</p>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  <p className="text-sm text-zinc-400">Open to work</p>
+                </div>
               </div>
               <div className="flex justify-center md:justify-start md:-ml-[132px] ml-0 items-center md:items-start ">
                 <Link
@@ -183,7 +188,7 @@ export default function Component() {
             transition={{ delay: 0.4 }}
           >
             <h2 className="text-xl font-semibold mb-4">Projetos</h2>
-            <div className="flex flex-col xl:flex-row gap-4 justify-center xl:justify-start">
+            <div className="flex flex-col gap-4 justify-start">
               {projects.map((project, index) => (
                 <motion.div
                   key={project.title}

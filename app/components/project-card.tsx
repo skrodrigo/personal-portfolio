@@ -1,12 +1,11 @@
-import React from 'react'
-import ShinyCard from './shiny-card'
+import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
+import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Badge } from '@/components/ui/badge'
-import { GlobeIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
-import { Project } from '../types/interfaces'
-
+import React from 'react'
+import type { Project } from '../types/interfaces'
+import ShinyCard from './shiny-card'
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
@@ -31,8 +30,12 @@ export default function ProjectCard({ project }: { project: Project }) {
             <p className="text-sm text-zinc-400">{project.description}</p>
           </div>
           <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech) => (
-              <Badge key={tech} variant="secondary" className='bg-blue-500/20 text-blue-500'>
+            {project.technologies.map(tech => (
+              <Badge
+                key={tech}
+                variant="secondary"
+                className={project.colorBadge}
+              >
                 {tech}
               </Badge>
             ))}
@@ -45,7 +48,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 href={project?.LandingPage}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex "
+                className="flex"
               >
                 Landing Page
               </Link>
@@ -76,6 +79,6 @@ export default function ProjectCard({ project }: { project: Project }) {
           </div>
         </CardFooter>
       </Card>
-    </ShinyCard >
+    </ShinyCard>
   )
 }

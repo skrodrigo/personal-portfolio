@@ -1,11 +1,11 @@
-import { getPostData, getAllPostSlugs, PostData } from '@/lib/posts'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import ShinyCard from '@/app/components/shiny-card'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
-import ShinyCard from '@/app/components/shiny-card'
+import { PostData, getAllPostSlugs, getPostData } from '@/lib/posts'
 import { ArrowLeftIcon, CalendarIcon, PersonIcon } from '@radix-ui/react-icons'
-import { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
 interface PostPageProps {
   params: {
@@ -56,11 +56,13 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <div className="min-h-screen bg-black text-white p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
-        <Link href="/blog" className="text-zinc-400 flex items-center gap-2 ml-4">
-          <div className='inline-flex items-center border rounded-full p-2 justify-center hover:text-zinc-200  group'>
+        <Link
+          href="/blog"
+          className="text-zinc-400 flex items-center gap-2 ml-4"
+        >
+          <div className="inline-flex items-center border rounded-full p-2 justify-center hover:text-zinc-200  group">
             <ArrowLeftIcon className="h-4 w-4" />
           </div>
-          voltar
         </Link>
 
         <ShinyCard>
@@ -87,11 +89,12 @@ export default async function PostPage({ params }: PostPageProps) {
                 <h1 className="text-4xl md:text-5xl font-bold text-zinc-100 mb-6 leading-tight">
                   {post.title}
                 </h1>
-
               </header>
 
               <article className="prose prose-invert max-w-none">
-                <div dangerouslySetInnerHTML={{ __html: post.contentHtml || '' }} />
+                <div
+                  dangerouslySetInnerHTML={{ __html: post.contentHtml || '' }}
+                />
               </article>
             </CardContent>
           </Card>
