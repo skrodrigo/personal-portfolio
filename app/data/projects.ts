@@ -44,6 +44,6 @@ export const projects: Project[] = [
       'NeonDB',
       'Cakto Pay',
     ],
-    colorBadge: 'bg-green-500/20 text-green-500',
+    colorBadge: 'bg-stone-400/20 text-stone-100',
   },
 ]
