@@ -12,6 +12,16 @@ export const projects: Project[] = [
     colorBadge: 'bg-blue-500/20 text-blue-500',
   },
   {
+    title: 'Nexus',
+    description:
+      'Tudo o que você precisa para criar, conectar e escalar: páginas, funis, ofertas, AI e automação em um só sistema.',
+    image: '/NEXUS.png',
+    linkFigma:
+      'https://www.figma.com/design/nlrIJaZSbt9naPuJjoY7Vr/Nexus?node-id=0-1&p=f&t=h6WXAUuj2SMfG1LD-0',
+    technologies: ['Figma'],
+    colorBadge: 'bg-emerald-500/20 text-emerald-500',
+  },
+  {
     title: 'Genesis',
     description:
       'Genesis é um SaaS de geração de interfaces Front End usando inteligência artificial.',
@@ -27,6 +37,7 @@ export const projects: Project[] = [
     ],
     colorBadge: 'bg-violet-500/20 text-violet-500',
   },
+
   {
     title: 'Receitai',
     description:

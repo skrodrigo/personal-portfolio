@@ -1,6 +1,6 @@
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
-import { GitHubLogoIcon } from '@radix-ui/react-icons'
+import { FigmaLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -66,17 +66,32 @@ export default function ProjectCard({ project }: { project: Project }) {
               </Link>
             </div>
           )}
-          <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
-            <GitHubLogoIcon className="h-4 w-4 mr-2" />
-            <Link
-              href={project.linkGithub}
-              target="_blank"
-              rel="noopener noreferrer"
-              className=""
-            >
-              Github
-            </Link>
-          </div>
+          {project?.linkGithub && (
+            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
+              <GitHubLogoIcon className="h-4 w-4 mr-2" />
+              <Link
+                href={project?.linkGithub}
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
+                Github
+              </Link>
+            </div>
+          )}
+          {project?.linkFigma && (
+            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
+              <FigmaLogoIcon className="h-4 w-4 mr-2" />
+              <Link
+                href={project?.linkFigma}
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
+                Figma
+              </Link>
+            </div>
+          )}
         </CardFooter>
       </Card>
     </ShinyCard>

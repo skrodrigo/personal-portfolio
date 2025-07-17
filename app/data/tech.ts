@@ -1,4 +1,4 @@
-import { Tech } from "@/app/types/interfaces";
+import type { Tech } from '@/app/types/interfaces'
 
 export const techs: Tech[] = [
   {
@@ -21,8 +21,7 @@ export const techs: Tech[] = [
   },
   {
     title: 'Python',
-    description:
-      '',
+    description: 'O Python é uma linguagem de programação de alto nível.',
     image: 'https://skillicons.dev/icons?i=python',
   },
   {
@@ -39,8 +38,7 @@ export const techs: Tech[] = [
   },
   {
     title: 'Figma',
-    description:
-      'O Figma é uma ferramenta de design de interface de usuário.',
+    description: 'O Figma é uma ferramenta de design de interface de usuário.',
     image: 'https://skillicons.dev/icons?i=figma',
   },
   {

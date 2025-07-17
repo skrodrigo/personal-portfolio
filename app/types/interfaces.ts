@@ -10,7 +10,8 @@ export interface Project {
   image: string
   LandingPage?: string | null
   Dashboard?: string | null
-  linkGithub: string
+  linkGithub?: string | null
+  linkFigma?: string | null
   technologies: string[]
   colorBadge: string
 }
