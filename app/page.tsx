@@ -25,7 +25,7 @@ export default function Component() {
       className="min-h-screen bg-black text-white"
     >
       <div className="flex flex-col md:flex-row max-w-5xl mx-auto">
-        <aside className="md:w-1/3 md:h-screen md:sticky top-0">
+        <aside className="md:w-1/3 md:h-screen md:sticky top-0 md:border-r ">
           <div className="flex flex-col items-center md:justify-start md:items-start p-8 space-y-4">
             <div className="flex flex-col items-center space-y-4">
               <Avatar className="w-40 h-40 md:w-60 md:h-60 relative z-10">
@@ -35,32 +35,35 @@ export default function Component() {
               <div className="ml-0 flex justify-center flex-col items-center md:items-start md:-ml-14">
                 <CardTitle className="text-xl">Rodrigo Carvalho</CardTitle>
                 <p className="text-sm text-zinc-400">Desenvolvedor Junior</p>
-                <div className="flex items-center space-x-2">
+                <div className="flex -ml-[2px] items-center space-x-2 border font-mono p-2 my-1 bg-zinc-900 rounded-md">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                   <p className="text-sm text-zinc-400">Open to work</p>
                 </div>
               </div>
-              <div className="flex justify-center md:justify-start md:-ml-[132px] ml-0 items-center md:items-start ">
+              <div className="flex justify-center md:justify-start md:-ml-[92px] ml-0 items-center md:items-start gap-2">
                 <Link
                   href="https://www.linkedin.com/in/skrodrigo"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="bg-zinc-900 p-2 rounded-md border"
                 >
-                  <LinkedInLogoIcon className="h-5 w-5 mr-2" />
+                  <LinkedInLogoIcon className="size-5" />
                 </Link>
                 <Link
                   href="https://github.com/skrodrigo"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="bg-zinc-900 p-2 rounded-md border"
                 >
-                  <GitHubLogoIcon className="h-5 w-5 mr-2" />
+                  <GitHubLogoIcon className="size-5" />
                 </Link>
                 <Link
                   href="https://www.instagram.com/skrodrigo"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="bg-zinc-900 p-2 rounded-md border"
                 >
-                  <EnvelopeClosedIcon className="h-5 w-5 mr-2" />
+                  <EnvelopeClosedIcon className="size-5" />
                 </Link>
               </div>
             </div>

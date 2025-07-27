@@ -58,9 +58,9 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="max-w-4xl mx-auto">
         <Link
           href="/blog"
-          className="text-zinc-400 flex items-center gap-2 ml-4"
+          className="text-zinc-400  flex items-center gap-2 ml-4"
         >
-          <div className="inline-flex items-center border rounded-full p-2 justify-center hover:text-zinc-200  group">
+          <div className="inline-flex bg-zinc-900 items-center border rounded-full p-2 justify-center hover:text-zinc-200  group">
             <ArrowLeftIcon className="h-4 w-4" />
           </div>
         </Link>
@@ -93,6 +93,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
               <article className="prose prose-invert max-w-none">
                 <div
+                  // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
                   dangerouslySetInnerHTML={{ __html: post.contentHtml || '' }}
                 />
               </article>
