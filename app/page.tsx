@@ -110,22 +110,32 @@ export default function Component() {
                   CEO & Co-Founder @ Sintesy
                 </h3>
                 <p className="text-sm text-zinc-400 max-w-2xl">
-                  Sintesy, um aplicativo capaz de transcrever e resumir: aulas,
-                  palestras, vídeos e criar anotações para você nunca esquecer
-                  qualquer conteúdo.
+                  Criação de landing pages otimizadas com Astro e React,
+                  aumentando a taxa de conversão e melhorando o SEO.
                   <br />
                   <br />
-                  Responsável pelo Desenvolvimento Web da plataforma, utilizando
-                  React, Next.js, Tailwind CSS, Context API e Axios, com foco em
-                  performance, escalabilidade e experiência do usuário.
+                  Desenvolvimento completo da plataforma web com Next.js 15 (App
+                  Router), TanStack Query, Nuqs, React, TailwindCSS, Context
+                  API, Zod e React Hook Form, integração com APIs REST via
+                  Axios.
                   <br />
                   <br />
-                  Além do desenvolvimento técnico, liderei iniciativas de
-                  marketing estratégico e posicionamento digital, contribuindo
-                  significativamente para a expansão da base de usuários,
-                  impactando mais de 1.500 leads com a solução. Participando
-                  também ativamente de um programa de aceleração de startups no
-                  SebraeLAB, fortalecendo a evolução do produto e do negócio.
+                  Desenho de telas no Figma seguindo as heurísticas de
+                  usabilidade e Design System.
+                  <br />
+                  <br />
+                  Implementação de pipelines de CI/CD que otimizaram o tempo de
+                  build e deploy na AWS.
+                  <br />
+                  <br />
+                  Líder de iniciativas estratégicas e posicionamento,
+                  contribuindo significativamente para a expansão da base de
+                  usuários, impactando mais de 4.300 leads.
+                  <br />
+                  <br />
+                  Participação de programas de aceleração de startups como o
+                  SebraeLAB, e CriarCE fortalecendo a evolução do produto e do
+                  negócio.
                 </p>
                 <div className="space-x-2">
                   <Badge variant="secondary">Node.js</Badge>
@@ -142,20 +152,31 @@ export default function Component() {
                   Artificial Intelligence with AWS @ Compass UOL
                 </h3>
                 <p className="text-sm text-zinc-400 max-w-2xl">
-                  Durante meu estágio na trilha de Inteligência Artificial com
-                  AWS, desenvolvi chatbots inteligentes utilizando Python e
-                  Node.js, integrando serviços como AWS Lambda, EC2, S3,
-                  Textract, Bedrock, API Gateway e CloudWatch Logs. Estruturei
-                  arquiteturas serverless com foco em alta disponibilidade,
-                  escalabilidade automática e observabilidade em tempo real.
+                  Desenvolvimento de chatbots inteligentes de ponta a ponta,
+                  desde a concepção até a entrega em produção, atuando no
+                  frontend e backend
                   <br />
                   <br />
-                  Implementei pipelines com Docker para ambientes
-                  conteinerizados, orquestrei instâncias EC2 e criei imagens
-                  otimizadas para produção. Participei ativamente de sprints
-                  ágeis com Scrum e Kanban, contribuindo em equipe para entregar
-                  soluções robustas, funcionais e alinhadas às melhores práticas
-                  de arquitetura na nuvem.
+                  Utilização de Python e Node.js, com bibliotecas como LangChain
+                  para criação de fluxos conversacionais avançados, integração
+                  com modelos de linguagem do AWS Bedrock e orquestração de
+                  prompts dinâmicos utilizando AWS Lambda e API Gateway, com S3
+                  para armazenamento
+                  <br />
+                  <br />
+                  Criação de webservers dedicados em EC2, configurando ambientes
+                  conteinerizados com Docker e Node.js, otimizando imagens para
+                  reduzir tempo de build e deploy
+                  <br />
+                  <br />
+                  Implementação, monitoramento e observabilidade em tempo real
+                  com CloudWatch Logs, criando métricas e alarmes para eventos
+                  críticos
+                  <br />
+                  <br />
+                  Participação em sprints ágeis com Scrum e Kanban, conduzindo
+                  daily meetings, refinamentos e entregas incrementais alinhadas
+                  às demandas e prazos
                 </p>
                 <div className="space-x-2">
                   <Badge variant="secondary">Node.js</Badge>
