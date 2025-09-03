@@ -22,14 +22,11 @@ export const projects: Project[] = [
   {
     title: 'Nexus',
     description:
-      'Tudo o que você precisa para criar, conectar e escalar: páginas, funis, ofertas, AI e automação em um só sistema.',
-    image: '/NEXUS.png',
+      'Uma plataforma de chat integrada com vários modelos de IA, onde o usuário pode alternar entre modelos, criar novos chats, organizar conversas e comparar respostas.',
+    image: '/nexus.png',
     LandingPage: 'https://n3xus.com.br/',
     linkGithub: 'https://github.com/skrodrigo/nexus',
-    linkFigma:
-      'https://www.figma.com/design/nlrIJaZSbt9naPuJjoY7Vr/Nexus?node-id=0-1&p=f&t=h6WXAUuj2SMfG1LD-0',
     technologies: [
-      'Figma',
       'Next.js',
       'TypeScript',
       'Tailwind',
@@ -37,10 +34,10 @@ export const projects: Project[] = [
       'BetterAuth',
       'Prisma',
       'AI-SDK',
+      'AI SDK ELEMENTS',
       'Stripe',
-      'Resend',
+      'GOOGLE SSO',
       'NeonDB',
-      'Nuqs',
       'Zod',
       'React Hook Form',
     ],
@@ -68,27 +65,5 @@ export const projects: Project[] = [
       'React Hook Form',
     ],
     colorBadge: 'bg-violet-500/20 text-violet-500',
-  },
-
-  {
-    title: 'Receitai',
-    description:
-      'receitai é um SaaS de receitas desbloquadas por créditos e também gera receitas com AI.',
-    image: '/recipeai.png',
-    LandingPage: 'https://receitai.vercel.app/',
-    linkGithub: 'https://github.com/skrodrigo/receitai-microsaas-nextjs',
-    technologies: [
-      'Next.js',
-      'Prisma',
-      'Shadcn',
-      'BetterAuth',
-      'Tailwind CSS',
-      'Shadcn UI',
-      'NeonDB',
-      'Cakto Pay',
-      'Zod',
-      'React Hook Form',
-    ],
-    colorBadge: 'bg-stone-400/20 text-stone-100',
   },
 ]

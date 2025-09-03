@@ -14,6 +14,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import ProjectCard from './components/project-card'
 import { projects } from './data/projects'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { techs } from './data/tech'
 
 export default function Component() {
@@ -29,7 +30,7 @@ export default function Component() {
           <div className="flex flex-col items-center md:justify-start md:items-start p-8 space-y-4">
             <div className="flex flex-col items-center space-y-4">
               <Avatar className="w-40 h-40 md:w-60 md:h-60 relative z-10">
-                <AvatarImage src="/perfil.png" alt="Rodrigo Carvalho" />
+                <AvatarImage src="/perfil.jpg" alt="Rodrigo Carvalho" />
                 <AvatarFallback>RC</AvatarFallback>
               </Avatar>
               <div className="ml-0 flex justify-center flex-col items-center md:items-start md:-ml-14">
@@ -193,8 +194,8 @@ export default function Component() {
             transition={{ delay: 0.2 }}
           >
             <h2 className="text-xl font-semibold mb-4 text-white">Stack</h2>
-            <div className="space-y-4">
-              <div className="flex justify-start items-center border-b border-zinc-900 pb-4 gap-2 w-full xs:overflow-hidden overflow-scroll ">
+            <ScrollArea className="w-full whitespace-nowrap rounded-md">
+              <div className="flex w-max space-x-4 border-b border-zinc-900 p-4">
                 {techs.map(tech => (
                   <img
                     src={tech.image}
@@ -204,7 +205,8 @@ export default function Component() {
                   />
                 ))}
               </div>
-            </div>
+              <ScrollBar orientation="horizontal" />
+            </ScrollArea>
           </motion.section>
           <motion.section
             initial={{ y: 20, opacity: 0 }}
