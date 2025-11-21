@@ -4,7 +4,7 @@ import ShinyCard from '@/app/components/shiny-card'
 import { ScrollProgress } from '@/components/motion-primitives/scroll-progress'
 import { Card, CardContent } from '@/components/ui/card'
 import type { PostData } from '@/lib/posts'
-import { ArrowLeftIcon, CalendarIcon, PersonIcon } from '@radix-ui/react-icons'
+import { IconArrowBackUp, IconCalendar, IconUser } from '@tabler/icons-react'
 import Link from 'next/link'
 
 interface PostContentProps {
@@ -21,7 +21,7 @@ export default function PostContent({ post }: PostContentProps) {
           className="text-zinc-400 flex items-center gap-2 ml-4 mb-4"
         >
           <div className="inline-flex bg-zinc-900 items-center border rounded-full p-2 justify-center hover:text-zinc-200 group">
-            <ArrowLeftIcon className="h-4 w-4" />
+            <IconArrowBackUp className="h-4 w-4" />
           </div>
         </Link>
 
@@ -31,7 +31,7 @@ export default function PostContent({ post }: PostContentProps) {
               <header className="mb-12">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400 mb-6">
                   <div className="flex items-center px-3 py-1 ">
-                    <CalendarIcon className="h-4 w-4 mr-1.5" />
+                    <IconCalendar className="h-4 w-4 mr-1.5" />
                     <time dateTime={post.date}>
                       {new Date(post.date).toLocaleDateString('pt-BR', {
                         year: 'numeric',
@@ -41,7 +41,7 @@ export default function PostContent({ post }: PostContentProps) {
                     </time>
                   </div>
                   <div className="flex items-center px-3 py-1 ">
-                    <PersonIcon className="h-4 w-4 mr-1.5" />
+                    <IconUser className="h-4 w-4 mr-1.5" />
                     <span>{post.author}</span>
                   </div>
                 </div>

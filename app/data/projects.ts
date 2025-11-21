@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: 'Sintesy',
     description:
-      'Sintesy ouve suas ideias, reuniões, planejamentos e cria uma linha contínua de raciocinio com anotações, tópicos, checklists e muito mais! Optimizando em 10x seus fluxos de trabalho.',
+      'Sintesy listens to your ideas, meetings, planning sessions and creates a continuous line of reasoning with notes, topics, checklists and much more! Optimizing your workflows by 10x.',
     image: '/sintesy.png',
     LandingPage: 'https://sintesy.me/',
     linkGithub: 'https://github.com/skrodrigo',
@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     title: 'Nexus',
     description:
-      'Uma plataforma de chat integrada com vários modelos de IA, onde o usuário pode alternar entre modelos, criar novos chats, organizar conversas e comparar respostas.',
+      'A chat platform integrated with multiple AI models, where users can switch between models, create new chats, organize conversations and compare responses.',
     image: '/nexus.png',
     LandingPage: 'https://n3xus.com.br/',
     linkGithub: 'https://github.com/skrodrigo/nexus',
@@ -46,7 +46,7 @@ export const projects: Project[] = [
   {
     title: 'Genesis',
     description:
-      'Genesis é um SaaS de geração de interfaces Front End usando inteligência artificial.',
+      'Genesis is a SaaS for generating Front End interfaces using artificial intelligence.',
     image: '/genesis.png',
     linkGithub: 'https://github.com/skrodrigo/genesis',
     technologies: [

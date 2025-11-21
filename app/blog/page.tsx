@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card'
-import { ArrowLeftIcon } from '@radix-ui/react-icons'
+import { IconArrowBackUp } from '@tabler/icons-react'
 import Link from 'next/link'
 import { getSortedPostsData } from '../../lib/posts'
 import ShinyCard from '../components/shiny-card'
@@ -14,14 +14,14 @@ export default async function BlogIndexPage() {
           href="/"
           className="inline-flex bg-zinc-900 items-center text-zinc-400 border rounded-full p-2 justify-center hover:text-zinc-200 mb-8 group"
         >
-          <ArrowLeftIcon className="h-4 w-4" />
+          <IconArrowBackUp className="h-4 w-4" />
         </Link>
 
         <h1 className="text-4xl font-bold mb-10 text-zinc-100">Blog</h1>
 
         {posts.length === 0 && (
           <p className="text-zinc-400">
-            Nenhum post encontrado ainda. Volte em breve!
+            No posts found yet. Come back soon!
           </p>
         )}
 
@@ -40,7 +40,7 @@ export default async function BlogIndexPage() {
                         dateTime={post.date}
                         className="text-sm text-zinc-500 mb-2 block"
                       >
-                        {new Date(post.date).toLocaleDateString('pt-BR', {
+                        {new Date(post.date).toLocaleDateString('en-US', {
                           year: 'numeric',
                           month: 'long',
                           day: 'numeric',
@@ -67,5 +67,5 @@ export default async function BlogIndexPage() {
 export const metadata = {
   title: 'Blog | Rodrigo Carvalho',
   description:
-    'Artigos e pensamentos sobre desenvolvimento web, tecnologia e carreira.',
+    'Articles and thoughts about web development, technology, and career.',
 }

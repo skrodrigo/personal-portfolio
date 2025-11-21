@@ -3,18 +3,18 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { CardTitle } from '@/components/ui/card'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import {
-  ArrowTopRightIcon,
-  CircleIcon,
-  EnvelopeClosedIcon,
-  GitHubLogoIcon,
-  LinkedInLogoIcon,
-} from '@radix-ui/react-icons'
+  IconArrowUpRight,
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconChevronUpRight,
+  IconMail,
+} from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import ProjectCard from './components/project-card'
 import { projects } from './data/projects'
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { techs } from './data/tech'
 
 export default function Component() {
@@ -35,7 +35,7 @@ export default function Component() {
               </Avatar>
               <div className="ml-0 flex justify-center flex-col items-center md:items-start md:-ml-14">
                 <CardTitle className="text-xl">Rodrigo Carvalho</CardTitle>
-                <p className="text-sm text-zinc-400">Desenvolvedor Junior</p>
+                <p className="text-sm text-zinc-400">Junior Developer</p>
                 <div className="flex -ml-[2px] items-center space-x-2 border font-mono p-2 my-1 bg-zinc-900 rounded-md">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                   <p className="text-sm text-zinc-400">Open to work</p>
@@ -48,7 +48,7 @@ export default function Component() {
                   rel="noopener noreferrer"
                   className="bg-zinc-900 p-2 rounded-md border"
                 >
-                  <LinkedInLogoIcon className="size-5" />
+                  <IconBrandLinkedin className="size-5" />
                 </Link>
                 <Link
                   href="https://github.com/skrodrigo"
@@ -56,7 +56,7 @@ export default function Component() {
                   rel="noopener noreferrer"
                   className="bg-zinc-900 p-2 rounded-md border"
                 >
-                  <GitHubLogoIcon className="size-5" />
+                  <IconBrandGithub className="size-5" />
                 </Link>
                 <Link
                   href="https://www.instagram.com/skrodrigo"
@@ -64,7 +64,7 @@ export default function Component() {
                   rel="noopener noreferrer"
                   className="bg-zinc-900 p-2 rounded-md border"
                 >
-                  <EnvelopeClosedIcon className="size-5" />
+                  <IconMail className="size-5" />
                 </Link>
               </div>
             </div>
@@ -76,11 +76,11 @@ export default function Component() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <h2 className="text-xl font-semibold mb-4 text-white">Formação</h2>
+            <h2 className="text-xl font-semibold mb-4 text-white">Education</h2>
             <div className="space-y-4">
               <div className="border-b border-zinc-900 pb-4 space-y-1">
                 <h3 className="font-medium text-zinc-100">
-                  Bacharel em Sistemas de Informação
+                  Bachelor's in Information Systems
                 </h3>
                 <p className="text-sm text-zinc-400">
                   Uninassau Juazeiro do Norte (2023 - 2026)
@@ -88,7 +88,7 @@ export default function Component() {
               </div>
               <div className="border-b border-zinc-900 pb-4 space-y-1">
                 <h3 className="font-medium text-zinc-100">
-                  Técnico em Informática
+                  Technical Degree in Information Technology
                 </h3>
                 <p className="text-sm text-zinc-400">
                   EEEP Antonia Nedina Onofre de Paiva (2020 - 2022)
@@ -102,7 +102,7 @@ export default function Component() {
             transition={{ delay: 0.2 }}
           >
             <h2 className="text-xl font-semibold mb-4 text-white">
-              Experiência
+              Experience
             </h2>
             <div className="space-y-4 mb-4">
               <div className="border-b border-zinc-900 pb-4 space-y-1">
@@ -111,38 +111,38 @@ export default function Component() {
                   CEO & Co-Founder @ Sintesy
                 </h3>
                 <p className="text-sm text-zinc-400 max-w-2xl">
-                  Criação de landing pages otimizadas com Astro e React,
-                  aumentando a taxa de conversão e melhorando o SEO.
+                  Creation of optimized landing pages with Astro and React,
+                  increasing conversion rates and improving SEO.
                   <br />
                   <br />
-                  Desenvolvimento completo da plataforma web com Next.js 15 (App
+                  Full development of the web platform with Next.js 15 (App
                   Router), TanStack Query, Nuqs, React, TailwindCSS, Context
-                  API, Zod e React Hook Form, integração com APIs REST via
+                  API, Zod, and React Hook Form, integration with REST APIs via
                   Axios.
                   <br />
                   <br />
-                  Desenho de telas no Figma seguindo as heurísticas de
-                  usabilidade e Design System.
+                  Screen design in Figma following usability heuristics and
+                  Design System.
                   <br />
                   <br />
-                  Implementação de pipelines de CI/CD que otimizaram o tempo de
-                  build e deploy na AWS.
+                  Implementation of CI/CD pipelines that optimized build and
+                  deploy time on AWS.
                   <br />
                   <br />
-                  Líder de iniciativas estratégicas e posicionamento,
-                  contribuindo significativamente para a expansão da base de
-                  usuários, impactando mais de 4.300 leads.
+                  Leader of strategic initiatives and positioning,
+                  contributing significantly to the expansion of the user base,
+                  impacting more than 4,300 leads.
                   <br />
                   <br />
-                  Participação de programas de aceleração de startups como o
-                  SebraeLAB, e CriarCE fortalecendo a evolução do produto e do
-                  negócio.
+                  Participation in startup acceleration programs such as
+                  SebraeLAB and CriarCE strengthening product and business
+                  evolution.
                 </p>
                 <div className="space-x-2">
                   <Badge variant="secondary">Node.js</Badge>
                   <Badge variant="secondary">Python</Badge>
                   <Badge variant="secondary">Marketing</Badge>
-                  <Badge variant="secondary">Liderança</Badge>
+                  <Badge variant="secondary">Leadership</Badge>
                 </div>
               </div>
             </div>
@@ -153,31 +153,31 @@ export default function Component() {
                   Artificial Intelligence with AWS @ Compass UOL
                 </h3>
                 <p className="text-sm text-zinc-400 max-w-2xl">
-                  Desenvolvimento de chatbots inteligentes de ponta a ponta,
-                  desde a concepção até a entrega em produção, atuando no
-                  frontend e backend
+                  End-to-end development of intelligent chatbots,
+                  from conception to production delivery, working on both
+                  frontend and backend
                   <br />
                   <br />
-                  Utilização de Python e Node.js, com bibliotecas como LangChain
-                  para criação de fluxos conversacionais avançados, integração
-                  com modelos de linguagem do AWS Bedrock e orquestração de
-                  prompts dinâmicos utilizando AWS Lambda e API Gateway, com S3
-                  para armazenamento
+                  Using Python and Node.js, with libraries like LangChain
+                  for creating advanced conversational flows, integration
+                  with AWS Bedrock language models and orchestration of
+                  dynamic prompts using AWS Lambda and API Gateway, with S3
+                  for storage
                   <br />
                   <br />
-                  Criação de webservers dedicados em EC2, configurando ambientes
-                  conteinerizados com Docker e Node.js, otimizando imagens para
-                  reduzir tempo de build e deploy
+                  Creation of dedicated web servers on EC2, configuring
+                  containerized environments with Docker and Node.js, optimizing images to
+                  reduce build and deploy time
                   <br />
                   <br />
-                  Implementação, monitoramento e observabilidade em tempo real
-                  com CloudWatch Logs, criando métricas e alarmes para eventos
-                  críticos
+                  Implementation, monitoring, and real-time observability
+                  with CloudWatch Logs, creating metrics and alarms for critical
+                  events
                   <br />
                   <br />
-                  Participação em sprints ágeis com Scrum e Kanban, conduzindo
-                  daily meetings, refinamentos e entregas incrementais alinhadas
-                  às demandas e prazos
+                  Participation in agile sprints with Scrum and Kanban, conducting
+                  daily meetings, refinements, and incremental deliveries aligned
+                  with demands and deadlines
                 </p>
                 <div className="space-x-2">
                   <Badge variant="secondary">Node.js</Badge>
@@ -193,9 +193,9 @@ export default function Component() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <h2 className="text-xl font-semibold mb-4 text-white">Stack</h2>
+            <h2 className="text-xl font-semibold mb-4 text-white">Tech Stack</h2>
             <ScrollArea className="w-full whitespace-nowrap rounded-md">
-              <div className="flex w-max space-x-4 border-b border-zinc-900 p-4">
+              <div className="flex w-max space-x-2 border-b border-zinc-900 p-4">
                 {techs.map(tech => (
                   <img
                     src={tech.image}
@@ -213,7 +213,7 @@ export default function Component() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <h2 className="text-xl font-semibold mb-4">Projetos</h2>
+            <h2 className="text-xl font-semibold mb-4">Projects</h2>
             <div className="flex flex-col gap-4 justify-start">
               {projects.map((project, index) => (
                 <motion.div
@@ -237,7 +237,7 @@ export default function Component() {
               className="group transition-colors flex items-center"
             >
               <h2 className="text-xl font-semibold hover:opacity-90">Blog</h2>
-              <ArrowTopRightIcon className="h-3 w-3 ml-1 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+              <IconArrowUpRight className="h-3 w-3 ml-1 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.section>
         </main>

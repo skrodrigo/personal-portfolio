@@ -1,6 +1,6 @@
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
-import { FigmaLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
+import { IconBrandFigma, IconBrandGithub } from '@tabler/icons-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -68,7 +68,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           )}
           {project?.linkGithub && (
             <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
-              <GitHubLogoIcon className="h-4 w-4 mr-2" />
+              <IconBrandGithub className="h-4 w-4 mr-2" />
               <Link
                 href={project?.linkGithub}
                 target="_blank"
@@ -81,7 +81,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           )}
           {project?.linkFigma && (
             <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
-              <FigmaLogoIcon className="h-4 w-4 mr-2" />
+              <IconBrandFigma className="h-4 w-4 mr-2" />
               <Link
                 href={project?.linkFigma}
                 target="_blank"

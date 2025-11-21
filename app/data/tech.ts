@@ -4,94 +4,94 @@ export const techs: Tech[] = [
   {
     title: 'TypeScript',
     description:
-      'O TypeScript é um superconjunto de JavaScript que adiciona tipagem estática ao código.',
+      'TypeScript is a superset of JavaScript that adds static typing to code.',
     image: 'https://skillicons.dev/icons?i=ts',
   },
   {
     title: 'Go',
     description:
-      'O Go é uma linguagem de programação de alto desempenho e baixo nível.',
+      'Go is a high-performance, low-level programming language.',
     image: 'https://skillicons.dev/icons?i=go',
   },
   {
     title: 'Python',
-    description: 'O Python é uma linguagem de programação de alto nível.',
+    description: 'Python is a high-level programming language.',
     image: 'https://skillicons.dev/icons?i=python',
   },
   {
     title: 'Dart',
     description:
-      'Dart é uma linguagem otimizada para clientes para aplicativos rápidos em qualquer plataforma.',
+      'Dart is a client-optimized language for fast apps on any platform.',
     image: 'https://skillicons.dev/icons?i=dart',
   },
   {
     title: 'Django',
     description:
-      'Django é um framework web Python de alto nível que incentiva o desenvolvimento rápido e um design limpo e pragmático.',
+      'Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.',
     image: 'https://skillicons.dev/icons?i=django',
   },
   {
     title: 'Node.js',
     description:
-      'O Node.js é um ambiente de execução JavaScript que permite rodar JavaScript no servidor.',
+      'Node.js is a JavaScript runtime environment that allows running JavaScript on the server.',
     image: 'https://skillicons.dev/icons?i=nodejs',
   },
   {
     title: 'React',
     description:
-      'O React é uma biblioteca JavaScript para criar interfaces de usuário.',
+      'React is a JavaScript library for building user interfaces.',
     image: 'https://skillicons.dev/icons?i=react',
   },
   {
     title: 'Next.js',
     description:
-      'O Next.js é um framework de React que permite renderização do lado do servidor.',
+      'Next.js is a React framework that enables server-side rendering.',
     image: 'https://skillicons.dev/icons?i=next',
   },
   {
     title: 'Astro',
     description:
-      'Astro é um framework web para construir websites rápidos e focados em conteúdo.',
+      'Astro is a web framework for building fast, content-focused websites.',
     image: 'https://skillicons.dev/icons?i=astro',
   },
   {
     title: 'Flutter',
     description:
-      "Flutter é o kit de ferramentas de UI do Google para construir aplicativos bonitos e compilados nativamente para mobile, web e desktop a partir de uma única base de código.",
+      "Flutter is Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",
     image: 'https://skillicons.dev/icons?i=flutter',
   },
   {
     title: 'Figma',
-    description: 'O Figma é uma ferramenta de design de interface de usuário.',
+    description: 'Figma is a user interface design tool.',
     image: 'https://skillicons.dev/icons?i=figma',
   },
   {
     title: 'Express',
     description:
-      'Express é um framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto robusto de recursos para aplicativos web e móvel.',
+      'Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.',
     image: 'https://skillicons.dev/icons?i=express',
   },
   {
     title: 'NestJS',
     description:
-      'NestJS é um framework para construir aplicações eficientes e escaláveis do lado do servidor com Node.js.',
+      'NestJS is a framework for building efficient, scalable server-side applications with Node.js.',
     image: 'https://skillicons.dev/icons?i=nestjs',
   },
   {
     title: 'PostgreSQL',
     description:
-      'PostgreSQL é um poderoso sistema de banco de dados objeto-relacional de código aberto.',
+      'PostgreSQL is a powerful, open-source object-relational database system.',
     image: 'https://skillicons.dev/icons?i=postgres',
   },
   {
     title: 'Prisma',
-    description: 'Prisma é um ORM de próxima geração para Node.js e TypeScript.',
+    description: 'Prisma is a next-generation ORM for Node.js and TypeScript.',
     image: 'https://skillicons.dev/icons?i=prisma',
   },
   {
     title: 'AWS',
     description:
-      'Amazon Web Services (AWS) é uma plataforma de serviços de computação em nuvem segura, oferecendo poder computacional, armazenamento de banco de dados, entrega de conteúdo e outra funcionalidade para ajudar negócios a escalar e crescer.',
+      'Amazon Web Services (AWS) is a secure cloud services platform, offering compute power, database storage, content delivery and other functionality to help businesses scale and grow.',
     image: 'https://skillicons.dev/icons?i=aws',
   },
 ]

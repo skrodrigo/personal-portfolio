@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useState } from 'react'
+import type React from 'react'
+import { useState } from 'react'
 
 export default function ShinyCard({
   children,
