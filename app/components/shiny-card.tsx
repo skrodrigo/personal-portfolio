@@ -22,7 +22,7 @@ export default function ShinyCard({
 
   return (
     <div
-      className={`relative overflow-hidden rounded-xl ${className}`}
+      className={`relative overflow-hidden rounded-none ${className}`}
       onMouseMove={handleMouseMove}
     >
       <div

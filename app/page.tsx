@@ -1,5 +1,6 @@
 'use client'
 
+import DiagonalLines from '@/components/animata/background/diagonal-lines'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { CardTitle } from '@/components/ui/card'
@@ -23,30 +24,27 @@ export default function Component() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
-      className="min-h-screen bg-black text-white"
+      className="min-h-screen bg-black text-white relative"
     >
-      <div className="flex flex-col md:flex-row max-w-5xl mx-auto">
-        <aside className="md:w-1/3 md:h-screen md:sticky top-0 md:border-r ">
-          <div className="flex flex-col items-center md:justify-start md:items-start p-8 space-y-4">
-            <div className="flex flex-col items-center space-y-4">
-              <Avatar className="w-40 h-40 md:w-60 md:h-60 relative z-10">
+      <DiagonalLines className="fixed h-full" />
+      <div className="flex flex-col md:flex-row max-w-7xl mx-auto min-h-screen relative bg-black">
+        <aside className="md:w-1/3 md:h-screen flex justify-center md:sticky top-0 md:border-r md:border-l ">
+          <div className="flex flex-col items-center md:justify-start md:items-start pt-8 space-y-4 w-full">
+            <div className="flex flex-col items-center space-y-4 md:border-b pb-3 w-full">
+              <Avatar className="w-40 h-40 md:w-60 md:h-60 relative z-10 ">
                 <AvatarImage src="/perfil.jpg" alt="Rodrigo Carvalho" />
                 <AvatarFallback>RC</AvatarFallback>
               </Avatar>
-              <div className="ml-0 flex justify-center flex-col items-center md:items-start md:-ml-14">
+              <div className="ml-0 flex justify-center flex-col items-center ">
                 <CardTitle className="text-xl">Rodrigo Carvalho</CardTitle>
-                <p className="text-sm text-zinc-400">Junior Developer</p>
-                <div className="flex -ml-[2px] items-center space-x-2 border font-mono p-2 my-1 bg-zinc-900 rounded-md">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                  <p className="text-sm text-zinc-400">Open to work</p>
-                </div>
+                <p className="text-sm text-zinc-400">Developer</p>
               </div>
-              <div className="flex justify-center md:justify-start md:-ml-[92px] ml-0 items-center md:items-start gap-2">
+              <div className="flex justify-center md:justify-start  ml-0 items-center md:items-start gap-2">
                 <Link
                   href="https://www.linkedin.com/in/skrodrigo"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-zinc-900 p-2 rounded-md border"
+                  className="bg-zinc-900 p-2 rounded-none border"
                 >
                   <IconBrandLinkedin className="size-5" />
                 </Link>
@@ -54,7 +52,7 @@ export default function Component() {
                   href="https://github.com/skrodrigo"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-zinc-900 p-2 rounded-md border"
+                  className="bg-zinc-900 p-2 rounded-none border"
                 >
                   <IconBrandGithub className="size-5" />
                 </Link>
@@ -62,7 +60,7 @@ export default function Component() {
                   href="https://www.instagram.com/skrodrigo"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-zinc-900 p-2 rounded-md border"
+                  className="bg-zinc-900 p-2 rounded-none border"
                 >
                   <IconMail className="size-5" />
                 </Link>
@@ -70,7 +68,7 @@ export default function Component() {
             </div>
           </div>
         </aside>
-        <main className="flex-1 p-4 md:p-8 space-y-8 overflow-y-auto">
+        <main className="flex-1 p-4 md:p-8 space-y-8 overflow-y-auto md:border-r">
           <motion.section
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -108,7 +106,7 @@ export default function Component() {
               <div className="border-b border-zinc-900 pb-4 space-y-1">
                 <span className="text-zinc-400 text-xs">12/2024 - Now</span>
                 <h3 className="font-medium text-zinc-100">
-                  CEO & Co-Founder @ Sintesy
+                  Co-Founder @ Sintesy
                 </h3>
                 <p className="text-sm text-zinc-400 max-w-2xl">
                   Creation of optimized landing pages with Astro and React,
@@ -194,7 +192,7 @@ export default function Component() {
             transition={{ delay: 0.2 }}
           >
             <h2 className="text-xl font-semibold mb-4 text-white">Tech Stack</h2>
-            <ScrollArea className="w-full whitespace-nowrap rounded-md">
+            <ScrollArea className="w-full whitespace-nowrap rounded-none">
               <div className="flex w-max space-x-2 border-b border-zinc-900 p-4">
                 {techs.map(tech => (
                   <img

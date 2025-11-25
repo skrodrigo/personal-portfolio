@@ -8,11 +8,11 @@ export default async function BlogIndexPage() {
   const posts = getSortedPostsData()
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 md:p-8">
+    <div className="min-h-screen bg-black text-white p-2">
       <div className="max-w-6xl mx-auto">
         <Link
           href="/"
-          className="inline-flex bg-zinc-900 items-center text-zinc-400 border rounded-full p-2 justify-center hover:text-zinc-200 mb-8 group"
+          className="inline-flex bg-zinc-900 items-center text-zinc-400 border rounded-none p-2 justify-center hover:text-zinc-200 mb-8 group"
         >
           <IconArrowBackUp className="h-4 w-4" />
         </Link>
