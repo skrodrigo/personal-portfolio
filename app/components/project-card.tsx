@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             priority
             layout="fill"
             objectFit="cover"
-            className="rounded-t-xl"
+            className="rounded-t-none"
           />
         </div>
         <CardContent className="p-4 flex-grow flex flex-col justify-between space-y-4">
@@ -43,7 +43,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         </CardContent>
         <CardFooter className="flex pt-2 pl-4 gap-2 justify-start">
           {project?.LandingPage && (
-            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
+            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-none font-semibold">
               <Link
                 href={project?.LandingPage}
                 target="_blank"
@@ -55,7 +55,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             </div>
           )}
           {project?.Dashboard && (
-            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
+            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-none font-semibold">
               <Link
                 href={project?.Dashboard}
                 target="_blank"
@@ -67,7 +67,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             </div>
           )}
           {project?.linkGithub && (
-            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
+            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-none font-semibold">
               <IconBrandGithub className="h-4 w-4 mr-2" />
               <Link
                 href={project?.linkGithub}
@@ -80,7 +80,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             </div>
           )}
           {project?.linkFigma && (
-            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-md font-semibold">
+            <div className="flex justify-center items-center bg-white text-black px-3 py-1 text-xs rounded-none font-semibold">
               <IconBrandFigma className="h-4 w-4 mr-2" />
               <Link
                 href={project?.linkFigma}
